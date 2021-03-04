@@ -47,11 +47,11 @@ jobs:
           cd starport/interface/cli/starport
           packr2 -v
 
-      - name: Snapcraft Login
-        env:
-          SNAPCRAFT_LOGIN: ${{ secrets.SNAPCRAFT_LOGIN }}
-        run: |
-          snapcraft login --with <(echo "$SNAPCRAFT_LOGIN")
+#      - name: Snapcraft Login
+#        env:
+#          SNAPCRAFT_LOGIN: ${{ secrets.SNAPCRAFT_LOGIN }}
+#        run: |
+#          snapcraft login --with <(echo "$SNAPCRAFT_LOGIN")
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
